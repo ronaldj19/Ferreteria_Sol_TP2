@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xmlns:aop="http://www.springframework.org/schema/aop"
+				xmlns:tx="http://www.springframework.org/schema/tx"
+				xsi:schemaLocation="
+						http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+						http://www.springframework.org/schema/aop
+						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+		
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:configJdbc.properties"/>
+	</bean>
+		    	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/dbsol"/>
+		<property name="username" value="root"/>
+		<property name="password" value="123456"/>
+	</bean>
+        
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- the transactional advice (what 'happens'; see the <aop:advisor/> bean below) -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<!-- the transactional semantics... -->
+		<tx:attributes>
+			<!-- all methods starting with 'get' are read-only--> 
+			<tx:method name="get*" read-only="true"/>
+			<!-- all methods starting with 'update' are not read-only--> 
+			<tx:method name="update*" read-only="false"/>
+			<tx:method name="delete*" read-only="false"/>
+			<!-- other methods use the default transaction settings (see below)--> 
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice>
+		
+	<!-- ensure that the above transactional advice runs for any execution 
+	of an operation defined by the all interfaces -->
+	<aop:config>
+		<aop:pointcut id="securityServiceOperation" expression="execution(* pe.com.sol.security.service.*.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="securityServiceOperation"/>
+	</aop:config>
+	
+	<aop:config>
+		<aop:pointcut id="torServiceOperation" expression="execution(* pe.com.sol.service.*.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="torServiceOperation"/>
+	</aop:config>
+	
+</beans>

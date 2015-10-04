@@ -1,0 +1,376 @@
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+td	{color: #294071; font: 8pt verdana,arial,helvetica,"sans-serif"; font-weight: bold; text-decoration: none;}
+
+a:link {
+	font-size: 8pt;
+	color: #081503;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #081503;
+	text-decoration: none;
+	font-size: 8pt;
+}
+
+a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #081503;
+	text-decoration: underline;
+}
+
+a:TextoMenuUnselected {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+
+.TextoMenuUnselected {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.TextoMenuSelected {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #fcd602
+}
+
+
+.AzulBold12p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #011B55
+}
+
+.AzulBold10p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #011B55
+}
+
+.AzulBold8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #011B55
+}
+
+.AzulBold6p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #011B55
+}
+
+.AzulBold7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #4178AB
+}
+
+.AzulNormal11p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	color: #294071
+}
+
+.AzulNormal10p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-variant: normal;	
+	color: #294071;
+	text-transform: none
+}
+
+.AzulNormal8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #294071;
+	font-variant: normal;
+	text-transform: none
+}
+
+.AzuloscuroBold7pCopy {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #011B55
+}
+
+.BlancoBold8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF
+}
+
+.BlancoBold12p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF
+}
+
+.AzulNormal12p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+	color: #294071;
+	font-variant: normal;
+	text-transform: none
+}
+
+.CelesteBold8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #4178AB
+}
+
+.CelesteBold8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #4178AB
+}
+
+.CafeNormal7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: normal;
+	color: #636363
+}
+
+.AzulNormal7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: normal;
+	color: #011B55
+}
+
+.CelesteNormal7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #4178AB
+}
+
+.BlancoNormal7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: normal;
+	font-variant: normal;
+	color: #FFFFFF
+}
+
+.menunormal {
+	
+}
+
+.LinkAzulNormal8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #3333FF;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: blink
+}
+
+table {
+	background-repeat: no-repeat;
+	background-position: left top
+}
+
+.AzulNormal5p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: normal;
+	color: #294071;
+	font-variant: normal;
+	text-transform: none
+}
+
+.RojoNormal12p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #B40404;
+	font-variant: normal;
+	text-transform: none
+}
+
+.RojoSub8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #FF3333;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: underline overline blink
+}
+
+.RojoBold10p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF0033
+}
+
+.RojoNormal8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #FF0033
+}
+
+.RojoNegrita7p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #FF0033
+}
+
+.verdrojbold8 {
+	font-family: "Courier New", Courier, mono;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #FF3300;
+	text-decoration: none
+}
+
+.VerCelesnorm8p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #336699
+}
+
+.boton {
+	font-size: 9pt;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular;
+	background-color: #ff9900;
+	text-decoration: none;
+	border-style: groove;
+}
+
+.cabecera {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: white;
+	background-color: red;
+}
+
+.celda {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #011B55;
+	background-color: #C8E4F1;
+}
+
+.fila1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #294071;
+	font-variant: normal;
+	text-transform: none;
+	background-color: #dce9fa;
+}
+
+.fila2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #294071;
+	font-variant: normal;
+	text-transform: none;
+	background-color: #e7effa;
+}
+
+.der {
+	text-align: right;
+}
+
+.izq {
+	text-align: left;
+}
+
+.cen {
+	text-align: center;
+}
+
+.filaLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #0000CC;
+	font-variant: normal;
+	text-transform: none;
+	background-color: #EFF7FB;
+}
+
+.link1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: red;
+	cursor: hand;
+}
+
+.handLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: blue;
+	cursor: hand;
+}
+.Texto10Azul
+{
+    COLOR: #000066;
+    FONT-FAMILY: Arial, Helvetica, Verdana;
+    FONT-SIZE: 9px
+}
+.Texto10Azul A
+{
+    COLOR: #000066;
+    TEXT-DECORATION: none
+}
+.Texto10Azul A:hover
+{
+    COLOR: #ff6600;
+    TEXT-DECORATION: none
+}
+
+
+

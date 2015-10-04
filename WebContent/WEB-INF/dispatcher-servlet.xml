@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
+          p:prefix="/WEB-INF/web/jsp/" 
+          p:suffix=".jsp" />
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	    <!-- one of the properties available; the maximum file size in bytes -->
+	    <property name="maxUploadSize" value="7000000"/>
+    </bean>
+  	  	  	  	  	
+    <!-- Controladores -->
+	<bean name="/security/*.htm" class="pe.com.sol.security.web.controller.LoginController" >
+		<property name="userSessionBean" ref="userSessionBean" />
+		<property name="usuarioService" ref="usuarioService" />
+    </bean>
+    
+    <bean name="/marcaproducto/*.htm" class="pe.com.sol.portal.web.controller.MarcaProductoController" >
+    	
+    </bean>
+    
+    <bean name="/parametro/*.htm" class="pe.com.sol.portal.web.controller.ParametroController" >
+    	<property name="userSessionBean" ref="userSessionBean" />
+    	<property name="parametroService" ref="parametroService" />
+    </bean>
+    
+    <bean name="/producto/*.htm" class="pe.com.sol.portal.web.controller.ProductoController" >
+    	<property name="userSessionBean" ref="userSessionBean" />
+    	<property name="productoService" ref="productoService" />
+    	<property name="marcaService" ref="marcaService" />
+    </bean>
+    
+    <bean name="/cliente/*.htm" class="pe.com.sol.portal.web.controller.ClienteController" >
+    	<property name="userSessionBean" ref="userSessionBean" />
+    	<property name="clienteService" ref="clienteService" />
+    </bean>
+    
+    <bean name="/transaccion/*.htm" class="pe.com.sol.portal.web.controller.TransaccionController" >
+    	<property name="userSessionBean" ref="userSessionBean" />
+    	<property name="clienteService" ref="clienteService" />
+    	<property name="productoService" ref="productoService" />
+    	<property name="parametroService" ref="parametroService" />
+    </bean>
+                    
+</beans>

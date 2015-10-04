@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xmlns:aop="http://www.springframework.org/schema/aop"
+				xsi:schemaLocation="
+						http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/aop
+						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<!-- HTTP Session-Scope <aop:scoped-proxy/>-->
+	<bean id="userSessionBean" class="pe.com.sol.portal.session.UserSessionBean" scope="session">
+		<aop:scoped-proxy />
+	</bean>
+	
+	<!-- Manejo de Filtro (al finalizar session) -->
+	<bean id="securityFilter" class="pe.com.sol.security.filter.SecurityFilter">
+	</bean>
+		
+    <!-- Capa de Servicio -->
+    <bean id="usuarioService" class="pe.com.sol.security.service.impl.UsuarioServiceImpl">
+    	<property name="usuarioDao" ref="usuarioDao" />
+    </bean>
+    
+    <bean id="marcaService" class="pe.com.sol.portal.web.service.impl.MarcaProdServiceImpl">
+    	<property name="marcaDao" ref="marcaDao" />
+    </bean>
+    
+    <bean id="parametroService" class="pe.com.sol.portal.web.service.impl.ParametroServiceImpl">
+    	<property name="parametroDao" ref="parametroDao" />
+    </bean>
+    
+    <bean id="productoService" class="pe.com.sol.portal.web.service.impl.ProductoServiceImpl">
+    	<property name="productoDao" ref="productoDao" />
+    </bean>
+   
+    
+    <bean id="clienteService" class="pe.com.sol.portal.web.service.impl.ClienteServiceImpl">
+    	<property name="clienteDao" ref="clienteDao" />
+    </bean>
+  
+                        				            
+</beans>
